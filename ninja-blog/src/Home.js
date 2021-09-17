@@ -1,6 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import UserList from './UserList';
 
+const styles = {
+  userList: {
+    minWidth: '100vw',
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+}
 
 const Home = () => {
 
@@ -38,7 +47,7 @@ const Home = () => {
   }
 
   return(
-    <div>
+    <div style={styles.userList}>
       {isLoading && <div>Loading...</div> }
       {users && <UserList users={users} handleDelete={handleDelete} />}
     </div>
