@@ -4,9 +4,9 @@ const styles = {
   div: {
     display: 'flex',
     backgroundColor: "#ffff",
-    boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
-    maxWidth: "100%",
-    maxHeight: "100%"
+    boxShadow: "0px 5px 5px 2px rgba(0, 0, 0, 0.2)",
+    width: "20%",
+    height: "100%"
   }
 }
 

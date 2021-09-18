@@ -4,10 +4,10 @@ import Card from './Card/Card';
 const styles = {
   div: {
     display: 'flex',
-    flexFlow: 'wrap row',
+    flexWrap: 'wrap',
     gap: '50px',
-    maxHeight: '20%',
-    maxWidth: '30%'
+    maxHeight: 'auto',
+    width: '100%'
   },
   img: {
     objectFit: 'contain',
