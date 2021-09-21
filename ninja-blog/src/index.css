@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+* {
+  margin: 0;
+  font-family: "Poppins";
+  color: #333;
+}
+
+html, body, *{
+  width: 100vw;
+  max-width: 100%;
+}
+
+.navBar h1 {
+  color: #f1356d;
+}
+
+.navBar a:hover {
+  color: #f1356d;
+}
+
+a, li{
+  text-decoration: none;
+}
+
+p{
+  max-width: 100%;
+}

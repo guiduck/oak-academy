@@ -4,8 +4,8 @@ import useFetch from './useFetch';
 
 const styles = {
   userList: {
-    width: '100vw',
-    height: '100vh',
+    width: '100%',
+    height: 'auto',
   }
 }
 
