@@ -1,22 +1,8 @@
 import React from 'react'
 import MenuBar from './MenuBar'
+import { routes } from './routes/Routes'
 
 export default function NavBar() {
-  const routes = [
-    {
-      path: '/home',
-      name: 'Home'
-     },
-     {
-      path: '/products',
-      name: 'Products'
-     },
-     {
-      path: '/contact',
-      name: 'Contact'
-     }
-  ]  
-  
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import UserList from './UserList';
 import useFetch from './useFetch';
 
@@ -14,6 +14,8 @@ const Home = () => {
   const url = "https://gist.githubusercontent.com/sales/f961f967c6668c7c1c3ed565e3bf94e8/raw/71168b72d9a3a199bd1de01026b5031875f6d432/team.json"
 
   const { data: users, isLoading, Error } = useFetch(url)
+
+  console.log(users)
 
   // useEffect(() => {
   //     fetch(

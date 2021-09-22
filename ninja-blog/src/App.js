@@ -1,15 +1,16 @@
 import React from "react";
-import Home from './Home';
-import NavBar from './NavBar';
+import Routes from './routes/Routes'
+import NavBar from './NavBar'
+import Home from './Home'
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
+      <>
         <NavBar />
-        <Home />
-      </div>
 
+        <Routes />
+      </>
     )
   }  
 }
