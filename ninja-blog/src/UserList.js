@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const styles = {
   div: {
@@ -44,17 +45,21 @@ export default function UserList({ users, handleDelete }) {
             return (
               
                 <div key={i} style={styles.card} >
-                  <div style={styles.cardWrapper}>
-                    <h2>{user.name}</h2>
-                    <div style={styles.img}>
-                      <img src={user.avatar} style={styles.avatar} ></img>
-                    </div>
+                  <div className='userLink' style={styles.cardWrapper}>
+                    <Link to={`/userDetails/${user.name}`}>
+                      <h2>{user.name}</h2>
+                      <div style={styles.img}>
+                        <img src={user.avatar} style={styles.avatar} ></img>
+                      </div>
+                    </Link>
+                    
                     <div style={styles.content} >
                       <p>{user.role}</p>
                       <p>{user.tweet}</p>
                       <a href={user.twitter}></a>                                          
                     </div>
                   </div>
+                  
                   {console.log(user)}
                   <button style={styles.button} onClick={() => handleDelete(user.name)}>delete user</button>
                   {console.log(user)} 

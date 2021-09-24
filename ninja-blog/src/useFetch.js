@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react'
 const useFetch = (url) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
-  const [error, setError] = useState('error')
+  const [error, setError] = useState(null)
   
   useEffect(() => {
+    const abortCont = new AbortController();
 
     const loadData = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, { signal: abortCont.signal });
         if(!response.ok) {
           throw Error('could not fetch!')
           setError('could not fetch');
@@ -19,7 +20,13 @@ const useFetch = (url) => {
           return data;
         }
       } catch(err) {
-        console.error(err)
+        
+        if ( err.name === 'AbortError' ) {
+          console.error('fetch aborted')
+        } else {
+          setError(err.message)
+          setIsLoading(false)
+        }
       }
     }
 
@@ -36,6 +43,8 @@ const useFetch = (url) => {
     //   setIsLoading(false);
     // });
     
+
+    return () => console.log('clean up')
   }, [url])
 
   return { data, isLoading, error }

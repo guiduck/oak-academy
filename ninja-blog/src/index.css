@@ -19,6 +19,18 @@ html, body, *{
   color: #f1356d;
 }
 
+.userLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.userLink h2 {
+  color: #f1356d;
+}
+
 a, li{
   text-decoration: none;
 }
