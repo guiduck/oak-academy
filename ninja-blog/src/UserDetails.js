@@ -21,14 +21,20 @@ export default function UserDetails() {
   }, [users])
 
   return (
-    <div className="user-details">
+    <div className="user-details-wrapper">
+      <div className="user-details">
       <h1>{`User Details id:${id}`}</h1>
       { isLoading && <div>Loading...</div> }
       { error && <div>{ error }</div> }
       { user && 
         <article>
-          <div>
+          <div >
+            <div>
               <h1>{user.name}</h1>
+            </div>
+            <div>
+              <img src={user.avatar}></img>
+            </div>            
           </div>
           <div>
             <p>{user.role}</p>
@@ -43,5 +49,7 @@ export default function UserDetails() {
         </article>
       }
     </div>
+    </div>
+    
   )
 }

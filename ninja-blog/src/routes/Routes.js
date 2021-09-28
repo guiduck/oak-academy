@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from '../Home';
 import Contact from '../Contact/Contact';
-import Products from '../Products/Products';
+import CreateUser from '../CreateUser/CreateUser';
 import UserDetails from '../UserDetails';
 
 import { BrowserRouter as Router, Switch, Route, useParams }from 'react-router-dom'
@@ -14,9 +14,9 @@ export const routes = [
     component: () => <Home />
    },
    {
-    path: '/products',
-    name: 'Products',
-    component: () => <Products />
+    path: '/createUser',
+    name: 'Create User',
+    component: () => <CreateUser />
    },
    {
     path: '/contact',
@@ -25,7 +25,7 @@ export const routes = [
    },
    {
      path: `/userDetails/:id`,
-     name: 'UserDetails',
+     name: 'User Details',
      component: () => <UserDetails />
    }
 ]  

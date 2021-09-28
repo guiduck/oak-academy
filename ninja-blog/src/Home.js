@@ -1,6 +1,7 @@
 import React from 'react';
 import UserList from './UserList';
 import useFetch from './useFetch';
+import CreateUser from './CreateUser/CreateUser';
 
 const styles = {
   userList: {
@@ -42,12 +43,15 @@ const Home = () => {
   // }
 
   return(
-    <div style={styles.userList}>
-      {isLoading && <div>Loading...</div> }
-      {users && <div><UserList users={users}
-      //  handleDelete={handleDelete} 
+    <div className="component">
+      <CreateUser />
+      <div style={styles.userList}>
+        {isLoading && <div>Loading...</div> }
+        {users && <div><UserList users={users}
+        //  handleDelete={handleDelete} 
 
-       /></div>}
+        /></div>}
+      </div>
     </div>
   );
 

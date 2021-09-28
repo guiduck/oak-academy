@@ -9,6 +9,7 @@
 html, body, *{
   width: 100vw;
   max-width: 100%;
+  margin: 0;
 }
 
 .navBar h1 {
@@ -17,6 +18,68 @@ html, body, *{
 
 .navBar a:hover {
   color: #f1356d;
+}
+
+.user-details-wrapper {
+  display: flex;
+  
+  width: 40%;
+  max-width: 60%;
+  justify-content: center;
+  margin: 0;
+}
+
+.user-details {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+
+.user-details button{
+  background:#f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.user-details div {
+  margin: 20px 0;
+}
+
+.create{
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing:border-box;
+
+}
+
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  cursor:pointer;
+  border-radius: 8px;
+}
+
+.component {
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 30px;
+ width: 100%;
 }
 
 .userLink {
