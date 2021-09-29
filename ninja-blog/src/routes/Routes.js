@@ -3,6 +3,7 @@ import Home from '../Home';
 import Contact from '../Contact/Contact';
 import CreateUser from '../CreateUser/CreateUser';
 import UserDetails from '../UserDetails';
+import NotFound from '../NotFound'
 
 import { BrowserRouter as Router, Switch, Route, useParams }from 'react-router-dom'
 
@@ -27,6 +28,11 @@ export const routes = [
      path: `/userDetails/:id`,
      name: 'User Details',
      component: () => <UserDetails />
+   },
+   {
+     path: `*`,
+     name: `page not found`,
+    component: () => <NotFound />
    }
 ]  
 

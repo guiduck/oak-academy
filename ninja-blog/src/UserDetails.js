@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import useFetch from './useFetch'
 
 export default function UserDetails() {
+
+  const history = useHistory()
 
   const [user, setUser] = useState(null)
 
@@ -19,6 +21,16 @@ export default function UserDetails() {
       )
     }    
   }, [users])
+
+  const handleDelete = () => {
+    fetch("https://gist.githubusercontent.com/sales/f961f967c6668c7c1c3ed565e3bf94e8/raw/71168b72d9a3a199bd1de01026b5031875f6d432/team.json" + user.name,
+      {
+        method: 'DELETE'        
+      }
+    ).then(() => {
+      history.push('/home')
+    })
+  }
 
   return (
     <div className="user-details-wrapper">
@@ -45,7 +57,7 @@ export default function UserDetails() {
           <div>
             {user.twitter}
           </div>
-          <button>delete user</button>
+          <button onClick={handleDelete}>delete user</button>
         </article>
       }
     </div>
