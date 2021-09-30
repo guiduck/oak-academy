@@ -15,6 +15,7 @@ export default createGlobalStyle`
 
     max-width: 100%;
     max-height: 100%;
+    background: var(--secondary);
   }
 
   *, button, input{
@@ -23,8 +24,8 @@ export default createGlobalStyle`
   }
 
   :root{
-    --primary: #000;
-    --secondary: #15181C;
+    --primary: palevioletred;
+    --secondary: papayawhip;
     --like: #E8265E; 
   }
 `

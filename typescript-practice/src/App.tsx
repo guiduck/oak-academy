@@ -1,14 +1,12 @@
 import React from 'react';
 import GlobalStyles from './styles/GlobalStyles';
+import FinanceLogger from './FinanceLogger'
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <div>
-        <h1>it's on</h1>
-  
-      </div>
+      <FinanceLogger />
     </>
     
   );
