@@ -16,7 +16,21 @@ const FinanceLogger: React.FC = () => {
   const handleSubmit = (e:any) => {
     e.preventDefault();
     const submit = { type, toFrom, details, amount }
+    console.log(submit)
+    greet({name: toFrom, id: toFrom})
   }
+
+  const add = (a: number, b: number) => {
+    console.log(a + b)
+  }
+
+  add(4, 6)
+
+  const greet = (person: {name: string, id: string|number}) => {
+    console.log(`hi, ${person.name} nice to meet u`)
+  }
+
+
 
   return (
     <Container>
@@ -31,7 +45,11 @@ const FinanceLogger: React.FC = () => {
             <label>
               Type:
             </label>
-            <select name='type'>
+            <select
+             name='type'
+             value={type}
+             onChange={(e) => setType(e.target.value)}
+            >
               <option value={`valor1`}>valor1</option>
               <option value={`valor2`}>valor2</option>
               <option value={`valor3`}>valor3</option>
