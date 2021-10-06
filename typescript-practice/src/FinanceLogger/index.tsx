@@ -13,6 +13,8 @@ const FinanceLogger: React.FC = () => {
   const [details, setDetails] = useState('');
   const [amount, setAmount] = useState('');
 
+  let greet: Function
+
   const handleSubmit = (e:any) => {
     e.preventDefault();
     const submit = { type, toFrom, details, amount }
@@ -20,24 +22,30 @@ const FinanceLogger: React.FC = () => {
     greet({name: toFrom, id: toFrom})
   }
 
-  const add = (a: number, b: number) => {
-    console.log(a + b)
-  }
+  type StringOrNum = string|number;  
 
-  add(4, 6)
-
-  const greet = (person: {name: string, id: string|number}) => {
+  greet = (person: {name: string, id: StringOrNum}) => {
     console.log(`hi, ${person.name} nice to meet u`)
   }
 
+  type StrNum = string | number;
 
+  let calc: (a: number, b: number, c:StrNum) => void;
+
+  calc = (a, b, whatToDo) => {
+    if(whatToDo === 'add') {
+      return (a + b);
+    } else {
+      return (a - b);
+    }
+  }
+
+  console.log(calc(15, 5, 'fuck')); 
 
   return (
     <Container>
       <Title>
-        <h1>
-          this is Finance Logger
-        </h1>  
+        this is Finance Logger
       </Title> 
       <FormWrapper>
         <form onSubmit={handleSubmit}>
