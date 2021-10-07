@@ -17,6 +17,10 @@ export const FormWrapper = styled.div`
     background:#fff;
   }
 
+  .theForm {
+
+  }
+
   button{
     background-color: var(--primary);
     color: #fff;
